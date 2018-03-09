@@ -1,10 +1,10 @@
 /*eslint-env browser*/
 
 //STEP 1
-/*
+
 var favMovies = ['Matrix', 'Badboys', 'Batman', 'Spiderman', 'Avengers'];
 window.console.log(favMovies[1]);
-*/
+
 //STEP 2
 /*
 var movies = new Array(5);
@@ -288,15 +288,74 @@ for(var i = 0; i<employee.length; i++){
 /*
 var movies = [["Matrix", 1], ["Transformers", 2], ["Batman", 3], ["Superman", 4], ["Hulk", 5]];
 
-movies.filter(function(movie){
-    window.console.log(movie[0]);
-});
+var titles = movies.map(function (movie) {
+    "use strict";
+    return movie.filter(function (subItem) {
+        return (typeof subItem === 'string');
+    });
+}).join(' ');
+
+window.console.log(titles);
 */
 
 //STEP 17
+/*
+var showEmployee = function(employees){
+    "use strict";
+    window.console.log('Employees:');
+    window.console.log('');
+    employees.forEach(function(employee){
+        window.console.log(employee.toUpperCase());
+    });
+};
+
+var employees =['Johnny', 'Borat', 'Chris', 'Kevin'];
+
+showEmployee(employees);
+*/
 
 //STEP 18
+/*
+var filterValues = function(arr){
+    "use strict";
+    var newArr = [];
+    newArr = arr.filter(function(val){
+        return (val !== 0 && val !== null && val !== 0 && val !== '' && val !== false);
+    });
+    return newArr;
+};
 
+var testArray = [58, '', 'abcd', true, null, false, 0]
+
+window.console.log(filterValues(testArray));
+*/
 //STEP 19
+/*
+var randomGetter = function (arr) {
+    "use strict";
+    var randNum = Math.floor(Math.random() * arr.length);
+    
+    return arr[randNum];
+};
+
+var testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+window.console.log(randomGetter(testArray));
+*/
 
 //STEP 20
+/*
+function findLargest(arr){
+    "use strict";
+    var largest = 0;
+    for(var i =0; i<arr.length; i++){
+        if(arr[i]>largest){
+            largest = arr[i];
+        }
+    }
+    
+    return largest; 
+}
+
+var testArray = [10, 2, 5, 101, 30, 6];
+window.console.log(findLargest(testArray));
+*/
